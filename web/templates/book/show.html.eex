@@ -1,0 +1,10 @@
+<h3>Title: <%= book_name(@book) %></h3>
+<table class="table">
+<tr>
+  <td><b>Gender of the Main Character:<b></td>
+  <td><%= book_mainchar(@book) %></td>
+</tr>
+<tr>
+  <td><b>Gender of the Title Character:<b></td>
+  <td><%= book_titlechar(@book) %></td>
+</tr>
