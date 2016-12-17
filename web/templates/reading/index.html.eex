@@ -1,0 +1,28 @@
+<h2>Listing readings</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Book</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for reading <- @readings do %>
+    <tr>
+      <td><%= reading.user_id %></td>
+      <td><%= reading.book_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: reading_path(@conn, :show, reading), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: reading_path(@conn, :edit, reading), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: reading_path(@conn, :delete, reading), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New reading", to: reading_path(@conn, :new) %>

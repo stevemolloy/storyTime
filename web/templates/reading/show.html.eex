@@ -1,0 +1,18 @@
+<h2>Show reading</h2>
+
+<ul>
+
+  <li>
+    <strong>User:</strong>
+    <%= @reading.user_id %>
+  </li>
+
+  <li>
+    <strong>Book:</strong>
+    <%= @reading.book_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: reading_path(@conn, :edit, @reading) %>
+<%= link "Back", to: reading_path(@conn, :index) %>
