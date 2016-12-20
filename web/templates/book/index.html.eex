@@ -9,9 +9,9 @@
 <%= for book <- @books do %>
 <tr>
   <td><%= book.id %>:</td>
-  <td><%= book_name(book) %></td>
-  <td><%= book_mainchar(book) %></td>
-  <td><%= book_titlechar(book) %></td>
+  <td><%= book.title %></td>
+  <td><%= book.mainChar %></td>
+  <td><%= book.titleChar %></td>
   <td><%= link "View", to: book_path(@conn, :show, book.id) %></td>
 </tr>
 <% end %> </table>

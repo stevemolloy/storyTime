@@ -8,7 +8,7 @@
   <table class="table">
     <%= for book <- @books do %>
     <tr>
-      <td><%= link book_name(book), to: book_path(@conn, :show, book.id) %></td>
+      <td><%= link book.title, to: book_path(@conn, :show, book.id) %></td>
     </tr>
     <% end %>
   </table>
