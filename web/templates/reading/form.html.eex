@@ -18,6 +18,7 @@
       <td><%= book_name(book) %></td>
       <td><%= book_mainchar(book) %></td>
       <td><%= book_titlechar(book) %></td>
+      <td><%= link "View", to: book_path(@conn, :show, book.id) %></td>
     </tr>
     <% end %>
   </table>
