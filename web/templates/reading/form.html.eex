@@ -5,6 +5,23 @@
     </div>
   <% end %>
 
+  <table class="table">
+    <tr>
+      <td></td>
+      <td><b>Title</b></td>
+      <td><b>Gender of<p>Main Character</b></td>
+      <td><b>Gender of<p>Title Character</b></td>
+    </tr>
+    <%= for book <- @books do %>
+    <tr>
+      <td><%= book.id %>:</td>
+      <td><%= book_name(book) %></td>
+      <td><%= book_mainchar(book) %></td>
+      <td><%= book_titlechar(book) %></td>
+    </tr>
+    <% end %>
+  </table>
+
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>

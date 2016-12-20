@@ -10,7 +10,8 @@ defmodule StoryTime.ReadingController do
 
   def new(conn, _params) do
     changeset = Reading.changeset(%Reading{})
-    render(conn, "new.html", changeset: changeset)
+    books = Repo.all(StoryTime.Book)
+    render(conn, "new.html", changeset: changeset, books: books)
   end
 
   def create(conn, %{"reading" => reading_params}) do
