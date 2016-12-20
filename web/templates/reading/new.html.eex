@@ -1,4 +1,4 @@
-<h2>New reading</h2>
+<h2>Click on the book you read</h2>
 
 <%= render "form.html", books: @books, changeset: @changeset, conn: @conn,
                         action: reading_path(@conn, :create) %>
