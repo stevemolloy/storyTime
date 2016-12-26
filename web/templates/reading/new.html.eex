@@ -1,6 +1,6 @@
-<h2>Click on the book you read</h2>
+<h2>Which book did you read?</h2>
+
+<b><%= link "Cancel", to: reading_path(@conn, :index) %></b>
 
 <%= render "form.html", books: @books, changeset: @changeset, conn: @conn,
                         action: reading_path(@conn, :create) %>
-
-<%= link "Back", to: reading_path(@conn, :index) %>
